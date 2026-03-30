@@ -1,0 +1,62 @@
+---
+import { siteConfig } from '../data/resume';
+---
+
+<header class="sticky top-0 z-50 bg-bg-elevated/80 backdrop-blur-md border-b border-border">
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <!-- Site name / initials -->
+    <a
+      href="#"
+      class="text-text-primary font-semibold text-lg tracking-tight hover:text-accent transition-colors duration-200"
+    >
+      {siteConfig.name.split(' ').map(w => w[0]).join('')}
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="hidden sm:flex items-center gap-6">
+      {siteConfig.navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class="text-sm text-text-muted hover:text-accent transition-colors duration-200 font-medium"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile: hamburger toggle (CSS-only) -->
+    <label class="sm:hidden cursor-pointer text-text-muted hover:text-accent transition-colors" for="mobile-menu-toggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </label>
+  </nav>
+
+  <!-- Mobile menu (CSS-only toggle via hidden checkbox) -->
+  <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+  <div class="sm:hidden hidden peer-checked:block border-t border-border bg-bg-elevated">
+    <ul class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
+      {siteConfig.navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class="mobile-nav-link block text-sm text-text-muted hover:text-accent transition-colors duration-200 font-medium py-1"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</header>
+
+<script>
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const toggle = document.getElementById('mobile-menu-toggle') as HTMLInputElement;
+      if (toggle) toggle.checked = false;
+    });
+  });
+</script>

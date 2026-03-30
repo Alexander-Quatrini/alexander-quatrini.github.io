@@ -1,0 +1,13 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import ProjectCard from '../ui/ProjectCard.astro';
+import { projects } from '../../data/resume';
+---
+
+<SectionWrapper id="projects" title="Projects">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map(project => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</SectionWrapper>

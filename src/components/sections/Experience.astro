@@ -1,0 +1,14 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import ExperienceCard from '../ui/ExperienceCard.astro';
+import { workExperience } from '../../data/resume';
+---
+
+<SectionWrapper id="experience" title="Work Experience">
+  <!-- Timeline container -->
+  <div class="relative flex flex-col gap-8 pl-4 border-l-2 border-border">
+    {workExperience.map(role => (
+      <ExperienceCard role={role} />
+    ))}
+  </div>
+</SectionWrapper>

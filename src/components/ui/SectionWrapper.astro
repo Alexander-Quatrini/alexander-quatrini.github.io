@@ -1,0 +1,27 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  class?: string;
+  surface?: boolean;
+}
+
+const { id, title, class: className = '', surface = false } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    'py-20 sm:py-24',
+    surface ? 'bg-bg-surface' : 'bg-bg-base',
+    className,
+  ]}
+>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl font-semibold text-text-primary mb-12 flex items-center gap-4">
+      <span class="w-1 h-8 bg-accent shrink-0"></span>
+      {title}
+    </h2>
+    <slot />
+  </div>
+</section>

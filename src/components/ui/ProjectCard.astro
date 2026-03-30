@@ -1,0 +1,52 @@
+---
+import Badge from './Badge.astro';
+import Icon from './Icon.astro';
+import type { Project } from '../../data/resume';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="bg-bg-surface border border-border p-6 flex flex-col gap-4 hover:border-accent/40 transition-colors duration-200 h-full">
+  <!-- Name -->
+  <h3 class="text-lg font-semibold text-text-primary">{project.name}</h3>
+
+  <!-- Description -->
+  <p class="text-text-muted text-sm leading-relaxed flex-1">{project.description}</p>
+
+  <!-- Tech badges -->
+  <div class="flex flex-wrap gap-2">
+    {project.tech.map(t => <Badge label={t} />)}
+  </div>
+
+  <!-- Links -->
+  {(project.demoUrl || project.sourceUrl) && (
+    <div class="flex gap-4 pt-2 border-t border-border">
+      {project.demoUrl && (
+        <a
+          href={project.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1.5 text-sm text-accent hover:text-accent-dim transition-colors duration-200 font-medium"
+        >
+          <Icon name="external-link" />
+          Live Demo
+        </a>
+      )}
+      {project.sourceUrl && (
+        <a
+          href={project.sourceUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1.5 text-sm text-text-muted hover:text-text-primary transition-colors duration-200 font-medium"
+        >
+          <Icon name="github" />
+          Source
+        </a>
+      )}
+    </div>
+  )}
+</div>

@@ -1,0 +1,46 @@
+---
+import Badge from './Badge.astro';
+import type { WorkExperience } from '../../data/resume';
+
+interface Props {
+  role: WorkExperience;
+}
+
+const { role } = Astro.props;
+---
+
+<div class="relative pl-8">
+  <!-- Timeline dot -->
+  <span class="absolute left-0 top-1.5 w-3 h-3 bg-accent ring-4 ring-bg-base shrink-0"></span>
+
+  <div class="bg-bg-surface border border-border p-6 hover:border-accent/40 transition-colors duration-200">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
+      <div>
+        <h3 class="text-lg font-semibold text-text-primary">{role.role}</h3>
+        <p class="text-accent text-sm font-medium">{role.company}</p>
+      </div>
+      <span class="text-text-muted text-sm shrink-0">
+        {role.startDate} — {role.endDate}
+      </span>
+    </div>
+
+    <!-- Description -->
+    <p class="text-text-muted text-sm leading-relaxed mb-4">{role.description}</p>
+
+    <!-- Bullets -->
+    <ul class="space-y-1.5 mb-4">
+      {role.bullets.map(bullet => (
+        <li class="flex gap-2 text-sm text-text-primary leading-relaxed">
+          <span class="text-accent shrink-0 mt-0.5">▹</span>
+          <span>{bullet}</span>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Skills -->
+    <div class="flex flex-wrap gap-2">
+      {role.skills.map(skill => <Badge label={skill} />)}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import { aboutData } from '../../data/resume';
+---
+
+<SectionWrapper id="about" title="About Me" surface>
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-start">
+
+    <!-- Photo placeholder (left column on desktop) -->
+    <div class="md:col-span-2 flex justify-center md:justify-start">
+      <div class="w-48 h-48 border-2 border-dashed border-border flex items-center justify-center text-text-muted text-xs font-mono select-none rounded-full">
+        Photo
+      </div>
+    </div>
+
+    <!-- Text content -->
+    <div class="md:col-span-3 flex flex-col gap-6">
+
+      <!-- Education -->
+      <div>
+        <h3 class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">Education</h3>
+        {aboutData.education.map(edu => (
+          <div class="border-l-2 border-border pl-4">
+            <p class="text-text-primary font-semibold">{edu.degree}</p>
+            <p class="text-text-muted text-sm">{edu.institution}</p>
+            <p class="text-text-muted text-xs font-mono mt-0.5">{edu.startYear} — {edu.endYear}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- What I'm looking for -->
+      <div>
+        <h3 class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">What I'm Looking For</h3>
+        <p class="text-text-muted text-sm leading-relaxed">{aboutData.lookingFor}</p>
+      </div>
+
+      <!-- Personality -->
+      <div>
+        <h3 class="text-sm font-semibold text-accent uppercase tracking-widest mb-3">About Me</h3>
+        <p class="text-text-muted text-sm leading-relaxed">{aboutData.personality}</p>
+      </div>
+    </div>
+  </div>
+</SectionWrapper>

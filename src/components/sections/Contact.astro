@@ -1,0 +1,31 @@
+---
+import SectionWrapper from '../ui/SectionWrapper.astro';
+import Icon from '../ui/Icon.astro';
+import { contactLinks, contactBlurb, siteConfig } from '../../data/resume';
+---
+
+<SectionWrapper id="contact" title="Get In Touch">
+  <div class="flex flex-col items-center text-center gap-8">
+    <p class="text-text-muted text-base leading-relaxed max-w-xl">{contactBlurb}</p>
+
+    <!-- Contact link buttons -->
+    <div class="flex flex-wrap justify-center gap-4">
+      {contactLinks.map(link => (
+        <a
+          href={link.url}
+          target={link.external ? '_blank' : undefined}
+          rel={link.external ? 'noopener noreferrer' : undefined}
+          class="flex items-center gap-2.5 px-5 py-3 border border-border bg-bg-surface hover:border-accent/60 hover:text-accent text-text-muted transition-colors duration-200 font-medium text-sm"
+        >
+          <Icon name={link.icon} />
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="mt-20 pt-6 border-t border-border text-center text-text-muted text-xs font-mono">
+    &copy; {new Date().getFullYear()} {siteConfig.name} · Built with Astro & Tailwind CSS
+  </div>
+</SectionWrapper>
