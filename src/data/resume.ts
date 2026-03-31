@@ -48,9 +48,9 @@ export interface ContactLink {
 // Site config
 // ----------------------------------------------------------
 export const siteConfig = {
-  name: 'Your Name',
+  name: 'Alexander Quatrini',
   title: 'Software Engineer',
-  tagline: 'Building thoughtful, reliable software with a focus on clean code and great user experiences.',
+  tagline: 'A young developer with a passion for complex problems and new technologies.',
   navLinks: [
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
@@ -69,7 +69,7 @@ export const heroData = {
   name: siteConfig.name,
   title: siteConfig.title,
   tagline: siteConfig.tagline,
-  ctaPrimary: { label: 'View My Work', href: '#projects' },
+  //ctaPrimary: { label: 'View My Work', href: '#projects' },
   ctaSecondary: { label: 'Get In Touch', href: '#contact' },
 };
 
@@ -79,19 +79,19 @@ export const heroData = {
 export const aboutData = {
   education: [
     {
-      institution: 'University Name',
+      institution: 'Northern Illinois University',
       degree: 'Bachelor of Science in Computer Science',
-      startYear: '20XX',
-      endYear: '20XX',
+      startYear: '2016',
+      endYear: '2020',
     },
   ],
   lookingFor:
-    'I am seeking a software engineering role where I can contribute to meaningful projects, ' +
-    'continue growing my technical skills, and collaborate with a supportive team. ' +
-    'I thrive in environments that value thoughtful problem-solving and clear communication.',
+    'I am seeking a software engineering role where I can contribute to meaningful projects with complex problems. ' +
+    'I am commited to continuous growth in technical expertise and skills such as communication and leadership. ' +
+    'Eager to join a team with a strong mentorship culture where I can learn from experienced engineers while contributing my own perspective to collaborative problem-solving.',
   personality:
-    'I am detail-oriented and methodical, with a genuine curiosity about how things work under the hood. ' +
-    'I value empathy in the workplace — both in writing software that real people use and in working well with teammates.',
+    'I am naturally curious and driven to understand how systems work. I am commited to searching for opportunites to improve.' +
+    'I value empathy in and out of the workplace. I enjoy creating software that will help people, and enjoy growing positive relations with other team members.',
 };
 
 // ----------------------------------------------------------
@@ -99,30 +99,30 @@ export const aboutData = {
 // ----------------------------------------------------------
 export const workExperience: WorkExperience[] = [
   {
-    company: 'Company Name',
-    role: 'Software Engineer',
-    startDate: 'Jan 20XX',
-    endDate: 'Jan 20XX',
-    description: 'Brief overview of your role and the product or team you worked on.',
+    company: 'RedMane Technology',
+    role: 'Software Developer',
+    startDate: 'June 2021',
+    endDate: 'April 2022',
+    description: 'Worked with Cúram, a social program management platform, to create case-management systems that implement extensive eligibility rules for programs like Medicaid.',
     bullets: [
-      'Describe a key achievement or responsibility here',
-      'Another impactful contribution or project you worked on',
-      'A third bullet highlighting a skill or outcome',
+      'Exposed and worked hands on with the full software development life cycle, including design, implementation, testing, and maintenance',
+      'Responsible for writing and updating documentation on existing systems',
+      'Communicated with clients, translating desires into technical designs',
     ],
-    skills: ['C#', '.NET', 'TypeScript', 'SQL'],
+    skills: ['C#', '.NET', 'Java', 'Cúram'],
   },
   {
-    company: 'Another Company',
-    role: 'Junior Developer',
-    startDate: 'Jun 20XX',
-    endDate: 'Dec 20XX',
-    description: 'Brief overview of your role and the product or team you worked on.',
+    company: 'Symbeo',
+    role: 'Software Developer',
+    startDate: 'November 2022',
+    endDate: 'May 2023',
+    description: 'Junior developer working to improve BillOCR, an optical character recognition software that turned hand written forms into text data.',
     bullets: [
-      'Key responsibility or project at this role',
-      'Something you built or improved',
-      'A metric or outcome that shows impact',
+      'Worked individually and closely with each member of the team to understand the entire workflow of BillOCR',
+      'Responsible for bug fixes on existing systems and updating documentation',
+      'Responsible for design, documentation, and development of new systems',
     ],
-    skills: ['JavaScript', 'React', 'CSS', 'Git'],
+    skills: ['Amazon Textract', 'C#', '.NET', 'Azure DevOps', 'Git'],
   },
 ];
 
@@ -132,24 +132,22 @@ export const workExperience: WorkExperience[] = [
 export const skills: SkillGroup[] = [
   {
     category: 'Languages',
-    items: ['C#', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL'],
+    items: ['Java', 'C#', 'C++', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'SQL'],
   },
   {
     category: 'Frameworks & Libraries',
-    items: ['React', 'Angular', 'Astro', '.NET / ASP.NET'],
+    items: ['React', 'jQuery', '.NET / ASP.NET'],
   },
   {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Node.js'],
+    items: ['Git', 'GitHub', 'Visual Studio', 'VS Code', 'Node.js', 'Claude Code', 'Azure DevOps'],
   },
   {
     category: 'Soft Skills',
     items: [
       'Attention to detail',
-      'Clear written communication',
       'Self-motivated learner',
-      'Empathy & collaboration',
-      'Problem decomposition',
+      'Empathy & collaboration'
     ],
   },
 ];
@@ -159,26 +157,12 @@ export const skills: SkillGroup[] = [
 // ----------------------------------------------------------
 export const projects: Project[] = [
   {
-    name: 'Project One',
+    name: 'Online Resume',
     description:
-      'A short description of what this project does and why you built it. Mention the problem it solves.',
-    tech: ['TypeScript', 'React', 'Tailwind CSS'],
-    demoUrl: 'https://example.com',
-    sourceUrl: 'https://github.com/yourusername/project-one',
-  },
-  {
-    name: 'Project Two',
-    description:
-      'Another project description. Focus on what makes it interesting or technically challenging.',
-    tech: ['C#', '.NET', 'SQL Server'],
-    sourceUrl: 'https://github.com/yourusername/project-two',
-  },
-  {
-    name: 'Project Three',
-    description:
-      'A third project. Could be a CLI tool, a library, a game, or anything you built for fun or learning.',
-    tech: ['JavaScript', 'Node.js'],
-    sourceUrl: 'https://github.com/yourusername/project-three',
+      'This page! Built with AI',
+    tech: ['Astro', 'Tailwind CSS', 'TypeScript',  'Claude (Anthropic)'],
+    demoUrl: 'https://alexander-quatrini.github.io/',
+    sourceUrl: 'https://github.com/Alexander-Quatrini/alexander-quatrini.github.io',
   },
 ];
 
@@ -198,36 +182,36 @@ export interface BuiltWithAI {
 // ----------------------------------------------------------
 export const builtWithAI: BuiltWithAI = {
   intro:
-    'This resume site was built entirely with the help of Claude, an AI assistant made by Anthropic. ' +
-    'Having been out of the workforce for a few years, I used this project as a deliberate on-ramp — ' +
-    'a hands-on way to get back up to speed with modern tooling while building something real and useful.',
+    'This website was built entirely with the help of Claude, an AI assistant made by Anthropic. ' +
+    'Having been out of the workforce for a few years, I used this project as a deliberate on-ramp. ' +
+    'This page is a hands-on way to get back up to speed with modern tooling while building something real and useful.',
   points: [
     {
       heading: 'Learning Astro from scratch',
       body:
-        'I had no prior experience with Astro before this project. Rather than spending weeks working through documentation alone, ' +
-        'I used AI to accelerate the learning curve — asking questions, understanding architectural decisions, and iterating on the design in real time.',
+        'I had no prior experience with Astro before this project. ' +
+        'I used AI to accelerate my learning curve. I asked questions about syntax and architecture, and iterated on the design in real time.',
     },
     {
       heading: 'Practicing a professional workflow',
       body:
-        'The project followed a structured process: planning the architecture before writing code, reviewing changes incrementally, ' +
-        'and using version control throughout. Working with an AI pair programmer reinforced good habits rather than replacing them.',
+        'The project followed a structured process: planning the architecture before writing code and reviewing changes incrementally. ' +
+        'Working with an AI pair programmer reinforced good habits rather than replacing them.',
     },
     {
       heading: 'AI as a tool, not a shortcut',
       body:
         'Every decision on this site — the layout, the sections, the color scheme, the content — was made by me. ' +
         'The AI helped me execute those decisions faster and learn as I went. ' +
-        'I see AI tooling the same way I see any other tool: something a good engineer learns to use well.',
+        'I see AI as a tool. Not something to be afraid of, but embrace.',
     },
     {
       heading: 'Reviewing and improving AI-generated code',
       body:
-        'The AI-generated code was not blindly trusted. During a walkthrough of the codebase, a structural problem was identified: ' +
-        'SVG icon markup was duplicated across multiple components with an inconsistent abstraction — some icons used a shared data object, ' +
-        'others had paths hardcoded inline. The fix was to extract a reusable Icon component, giving every icon a single source of truth. ' +
-        'This is the kind of iteration that separates using AI effectively from using it carelessly.',
+        'I do not blindly trust what the AI does. During a walkthrough of the codebase, a structural problem was identified: ' +
+        'SVG icon markup was duplicated across multiple components with inconsistent abstraction. Some icons had paths hard coded inline.' +
+        'The fix was to extract a reusable Icon component, giving every icon a single source of truth. ' +
+        'While this was a minor problem on a small project, it is important to reinforce skepticism of generated code, lest a major problem arises.',
     },
   ],
   techUsed: ['Astro', 'Tailwind CSS', 'TypeScript', 'Claude (Anthropic)'],
@@ -255,8 +239,8 @@ export const hobbies: Hobby[] = [
     label: 'Card Games',
     icon: '🃏',
     description:
-      'I play Magic: The Gathering and Sorcery: Contested Realm at a competitive and casual level. ' +
-      'Both games reward deep strategic thinking, careful resource management, and reading your opponent.',
+      'I play card games such as Magic: The Gathering at a casual level. ' +
+      'These games reward deep strategic thinking, careful resource management, and reading your opponent. As well as allowing me to meet with and interact with a large variety of people.',
     transferableSkills: [
       'Strategic thinking',
       'Resource management',
@@ -283,13 +267,12 @@ export const hobbies: Hobby[] = [
     label: 'Music',
     icon: '🎵',
     description:
-      'I listen broadly across most popular genres — the exceptions are few. Music is how I decompress, ' +
+      'I listen broadly across most popular genres. Music is how I decompress, ' +
       'find focus during deep work, and stay attuned to patterns and emotion in ways that carry over into creative problem-solving.',
     transferableSkills: [
       'Emotional intelligence',
       'Creative thinking',
       'Deep focus & flow state',
-      'Appreciation for patterns & structure',
     ],
   },
 ];
@@ -300,19 +283,19 @@ export const hobbies: Hobby[] = [
 export const contactLinks: ContactLink[] = [
   {
     label: 'Email',
-    url: 'mailto:you@example.com',
+    url: 'mailto:alexanderquatrini@gmail.com',
     icon: 'email',
     external: false,
   },
   {
     label: 'GitHub',
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/Alexander-Quatrini',
     icon: 'github',
     external: true,
   },
   {
     label: 'LinkedIn',
-    url: 'https://linkedin.com/in/yourprofile',
+    url: 'https://linkedin.com/in/alexander-quatrini',
     icon: 'linkedin',
     external: true,
   },
