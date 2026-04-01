@@ -195,13 +195,12 @@ export const builtWithAI: BuiltWithAI = {
     {
       heading: 'Practicing a professional workflow',
       body:
-        'The project followed a structured process: planning the architecture before writing code and reviewing changes incrementally. ' +
-        'Working with an AI pair programmer reinforced good habits rather than replacing them.',
+        'Claude created an implementation plan, and I reviewed it. The plan was revised and refined before I gave Claude the go-ahead.',
     },
     {
       heading: 'AI as a tool, not a shortcut',
       body:
-        'Every decision on this site — the layout, the sections, the color scheme, the content — was made by me. ' +
+        'Once Claude finished the layout of the site, I made important decisions on the theme, changing the layout, and the content.' +
         'The AI helped me execute those decisions faster and learn as I went. ' +
         'I see AI as a tool. Not something to be afraid of, but embrace.',
     },
@@ -225,7 +224,7 @@ export const hobbies: Hobby[] = [
     label: 'Dungeons & Dragons',
     icon: '🐉',
     description:
-      'I both play and run games as a Dungeon Master. DMing means building worlds, crafting stories, ' +
+      'I both play and run games as a Dungeon Master (DM). DMing means building worlds, crafting stories, ' +
       'managing a table of players with different goals, and improvising when nothing goes to plan.',
     transferableSkills: [
       'Leadership & facilitation',
@@ -240,7 +239,8 @@ export const hobbies: Hobby[] = [
     icon: '🃏',
     description:
       'I play card games such as Magic: The Gathering at a casual level. ' +
-      'These games reward deep strategic thinking, careful resource management, and reading your opponent. As well as allowing me to meet with and interact with a large variety of people.',
+      'These games reward deep strategic thinking, careful resource management, and reading your opponent.' + 
+      'Playing at a local card shop gave me the opportunity to meet and interact with a variety of players.',
     transferableSkills: [
       'Strategic thinking',
       'Resource management',
@@ -250,24 +250,10 @@ export const hobbies: Hobby[] = [
     ],
   },
   {
-    label: 'Reading',
-    icon: '📚',
-    description:
-      'I consume books in both physical and audiobook formats across a wide range of genres and subjects. ' +
-      'Reading keeps me curious, builds my vocabulary, and exposes me to perspectives outside my own experience.',
-    transferableSkills: [
-      'Continuous self-improvement',
-      'Focus & concentration',
-      'Critical thinking',
-      'Empathy & perspective-taking',
-      'Written communication',
-    ],
-  },
-  {
     label: 'Music',
     icon: '🎵',
     description:
-      'I listen broadly across most popular genres. Music is how I decompress, ' +
+      'I listen to music across most popular genres. Music is how I decompress, ' +
       'find focus during deep work, and stay attuned to patterns and emotion in ways that carry over into creative problem-solving.',
     transferableSkills: [
       'Emotional intelligence',
