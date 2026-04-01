@@ -30,6 +30,17 @@ export interface SkillGroup {
   items: string[];
 }
 
+export interface AIPoint {
+  heading: string;
+  body: string;
+}
+
+export interface BuiltWithAI {
+  intro: string;
+  points: AIPoint[];
+  techUsed: string[];
+}
+
 export interface Hobby {
   label: string;
   icon: string;
@@ -166,17 +177,6 @@ export const projects: Project[] = [
   },
 ];
 
-export interface AIPoint {
-  heading: string;
-  body: string;
-}
-
-export interface BuiltWithAI {
-  intro: string;
-  points: AIPoint[];
-  techUsed: string[];
-}
-
 // ----------------------------------------------------------
 // Built with AI
 // ----------------------------------------------------------
@@ -200,7 +200,7 @@ export const builtWithAI: BuiltWithAI = {
     {
       heading: 'AI as a tool, not a shortcut',
       body:
-        'Once Claude finished the layout of the site, I made important decisions on the theme, changing the layout, and the content.' +
+        'Once Claude finished the layout of the site, I made important decisions on the theme, changing the layout, and the content. ' +
         'The AI helped me execute those decisions faster and learn as I went. ' +
         'I see AI as a tool. Not something to be afraid of, but embrace.',
     },
@@ -239,7 +239,7 @@ export const hobbies: Hobby[] = [
     icon: '🃏',
     description:
       'I play card games such as Magic: The Gathering at a casual level. ' +
-      'These games reward deep strategic thinking, careful resource management, and reading your opponent.' + 
+      'These games reward deep strategic thinking, careful resource management, and reading your opponent. ' + 
       'Playing at a local card shop gave me the opportunity to meet and interact with a variety of players.',
     transferableSkills: [
       'Strategic thinking',
